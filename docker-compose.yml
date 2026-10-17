@@ -25,7 +25,8 @@ services:
       retries: 20
 
   mcphub:
-    image: huangjunsen/xiaozhi-mcphub:latest
+    image: hdkp81/xiaozhi-mcphub:latest
+    build: .
     container_name: xiaozhi-mcphub
     depends_on:
       db:
