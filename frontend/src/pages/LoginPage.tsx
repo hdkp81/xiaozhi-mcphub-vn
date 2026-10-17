@@ -438,7 +438,8 @@ const LoginPage: React.FC = () => {
           )}
 
           <div className="pt-4 text-xs text-center text-gray-500 dark:text-gray-500">
-            Copyright © {new Date().getFullYear()} xiaozhi-mcphub
+            <div>Copyright © {new Date().getFullYear()} xiaozhi-mcphub-vn</div>
+			      <div>Modified by HDKP</div>
           </div>
         </div>
       </div>

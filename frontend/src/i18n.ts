@@ -1,9 +1,11 @@
+//Modified by Dinh
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Import shared translations from root locales directory
 import enTranslation from '../../locales/en.json';
+import viTranslation from '../../locales/vi.json';//dinh
 import zhTranslation from '../../locales/zh.json';
 import frTranslation from '../../locales/fr.json';
 import trTranslation from '../../locales/tr.json';
@@ -18,6 +20,9 @@ i18n
     resources: {
       en: {
         translation: enTranslation,
+      },
+	  vi: {//dinh
+        translation: viTranslation,
       },
       zh: {
         translation: zhTranslation,
