@@ -12,6 +12,12 @@ const SponsorDialog: React.FC<SponsorDialogProps> = ({ open, onOpenChange }) => 
 
   if (!open) return null;
 
+  // Ảnh QR theo ngôn ngữ hdkp
+  const rewardImages: Record<string, string> = {
+    zh: './assets/reward.png',
+    vi: './assets/reward-vn.png',
+  };
+  const rewardSrc = rewardImages[i18n.language];								   
   return (
     <div className="flex fixed inset-0 z-50 justify-center items-center p-4 bg-black/50">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg dark:bg-gray-800">
@@ -30,9 +36,9 @@ const SponsorDialog: React.FC<SponsorDialogProps> = ({ open, onOpenChange }) => 
           </h3>
 
           <div className="flex flex-col justify-center items-center py-4">
-            {i18n.language === 'zh' ? (
+            {rewardSrc ? (
               <img
-                src="./assets/reward.png"
+                src={rewardSrc}
                 alt={t('sponsor.rewardAlt')}
                 className="max-w-full h-auto"
                 style={{ maxHeight: '400px' }}
@@ -41,7 +47,7 @@ const SponsorDialog: React.FC<SponsorDialogProps> = ({ open, onOpenChange }) => 
               <div className="text-center">
                 <p className="mb-4 text-gray-700 dark:text-gray-300">{t('sponsor.supportMessage')}</p>
                 <a
-                  href="https://github.com/huangjunsen0406/xiaozhi-mcphub"
+                  href="https://github.com/hdkp81/xiaozhi-mcphub-vn"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-[#13C3FF] text-white px-4 py-2 rounded-md hover:bg-[#00A5E5] transition-colors"
